@@ -1,0 +1,21 @@
+// BREAKPOINTS
+$desktop4k: 'only screen and (min-width: 3840px)';
+$desktop1440p: 'only screen and (min-width: 2560px)';
+$desktopHD: 'only screen and (min-width: 1920px)';
+$desktopMedium: 'only screen and (min-width: 1680px)';
+$desktopSmall: 'only screen and (min-width: 1440px)';
+$laptop: 'only screen and (min-width: 1366px)';
+$laptopSmall: 'only screen and (min-width: 1280px)';
+$tabletLandscape: 'only screen and (min-width: 1024px)';
+$tabletMedium: 'only screen and (min-width: 900px)';
+$tabletPortrait: 'only screen and (min-width: 768px)';
+$mobileXLarge: 'only screen and (min-width: 640px)';
+$mobileLarge: 'only screen and (min-width: 576px)';
+$mobileMedium: 'only screen and (min-width: 480px)';
+$mobileSmall: 'only screen and (min-width: 415px)';
+$mobileXSmall: 'only screen and (min-width: 375px)';
+$mobileTiny: 'only screen and (min-width: 325px)';
+// Use breakpoint variables with media queries by using interpolation like this:
+@media #{$desktopSmall} {
+    // Styles go here
+}

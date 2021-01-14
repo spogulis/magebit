@@ -1,0 +1,205 @@
+.form-wrapper {
+    margin: 188px 20px 0 20px;
+    height: 371px;
+    background-image: linear-gradient(180deg, $white 0%, $lightTeal 100%);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$tabletPortrait} {
+        height: 500px;
+    }
+
+    @media #{$desktopSmall} {
+        height: 371px;
+        background: none;
+        padding: 30px 40px;
+        position: relative;
+    }
+    
+    .subscribe-title {
+        display: block;
+        font-family: Georgia;
+        font-size: 24px;
+        color: $black;
+        margin-bottom: 11px;
+        line-height: 34px;
+        letter-spacing: 1px;
+        
+        @media #{$desktopSmall} {
+            font-size: 35px;
+            margin-bottom: 20px;
+            line-height: 36px;
+            letter-spacing: 0;
+        }
+    }
+    .subscribe-subtitle {
+        display: block;
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 20px;
+        color: $darkGray;
+        
+        @media #{$desktopSmall} {
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 50px;
+        }
+    }
+    
+    .subscribe-form {
+        position: relative;
+        
+        .email-wrapper {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 60px;
+            border: 1px solid $lightGray;
+            box-sizing: border-box;
+            border-left: 4px solid $blue;
+            margin-bottom: 20px;
+            background: $white;
+            justify-content: space-between;
+            padding-right: 10px;
+            max-width: 100%;
+    
+            @media #{$tabletPortrait} {
+                margin-bottom: 72px;
+            }
+            @media #{$desktopSmall} {
+                height: 70px;
+                position: absolute;
+                left: -40px;
+                padding: 0 34px 0 25px;
+                max-width: 663px;
+                margin-bottom: 20px;
+                width: 663px;
+            }
+    
+            &:hover, &:focus-within  {
+                box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+            }
+    
+            #email {
+                font-size: 16px;
+                line-height: 24px;
+                font-family: Arial;
+                color: $darkGray;
+                background: inherit;
+                border: none;
+                outline: none;
+                margin: 18px 0 18px 13px;
+                width: 100%;
+    
+                &:focus {
+                    outline: none;
+                    border: none;
+                    background: inherit;
+                }
+    
+                &:-webkit-autofill {
+                    background: none;
+                }
+            }
+    
+            button {
+                background: white;
+                border: none;
+                
+                &:focus-within {
+                    outline: none;
+                }
+                .email-next-arrow {
+                    &:hover{
+                        color: $blue;
+                        opacity: 1;
+                    }
+                    display: flex;
+                    font-size: 33px;
+                    opacity: 0.3;
+                    
+    
+                    &::before {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        .error-wrapper {
+            position: absolute;
+            margin-top: -23px;
+            
+            @media #{$tabletPortrait} {
+                margin-top: -70px;
+            }
+
+            @media #{$desktopSmall} {
+                margin-top: 77px;
+            }
+
+            .error-msg {
+                display: block;
+                font-family: Arial;
+                font-size: 11px;
+                line-height: 28px;
+                color: $darkTeal;
+                
+                @media #{$tabletPortrait} {
+                    font-size: 13px;
+                }
+
+                @media #{$desktopSmall} {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .tos-wrapper {
+            display: flex;
+            align-items: center;
+            margin: 0 0 7px 0;
+    
+            @media #{$desktopSmall} {
+                position: relative;
+                margin: 123px 0 37px 0;
+            }
+            .checkmark {
+                background: #FFFFFF;
+                border: 1px solid #E3E3E4;
+                box-sizing: border-box;
+                border-radius: 3px;
+            }
+            .checkbox-container input:checked ~ .checkmark {
+                background-color: $blue;
+                border: none;
+            }
+            .tos-desc, .tos-desc a {
+                font-family: Arial;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 28px;
+            }
+            span.tos-desc {
+                a:hover {
+                    color: #4066A5;
+                }
+            }
+            .tos-desc {
+                margin-left: 6px;
+                color: $darkGray;
+    
+                a {
+                    color: $black;
+                }
+                a:visited {
+                    color: #233759;
+                }
+            }
+        }
+    }
+}
